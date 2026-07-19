@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding — Organisational Excellence</title>
+<meta name="description" content="Watch a short film, or jump straight to a text reflection on five realities every growing organisation faces.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400;1,8..60,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="reflect">
+
+<div class="pillar-progress" aria-hidden="true">
+  <div class="pillar-progress__capital"></div>
+  <div class="pillar-progress__shaft"><div class="pillar-progress__fill"></div></div>
+  <div class="pillar-progress__base"></div>
+</div>
+
+<nav class="nav" id="nav">
+  <span class="nav__mark">OE</span>
+  <span class="nav__title">Organisational Excellence</span>
+  <div class="nav__pages">
+    <a href="index.html" class="nav__page">Begin</a>
+    <a href="reflect.html" class="nav__page is-current">Understanding</a>
+    <a href="navigation.html" class="nav__page">Navigation</a>
+    <a href="navigation.html#commitments" class="nav__page">Commitment</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================================================
+       VIDEO — autoplays (muted, per browser policy), with a
+       persistent "skip to text" control and a sound toggle.
+       ============================================================ -->
+  <section class="section section--video" id="video-section">
+
+    <div class="video__topbar reveal">
+      <span class="video__eyebrow">Understanding</span>
+      <button class="btn btn--ghost btn--small" id="toReflectBtn">
+        <span>Skip to text reflection</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="video__frame" id="videoFrame">
+      <video id="introVideo" class="video__el" src="assets/intro.mp4" poster="assets/poster.jpg" autoplay muted playsinline preload="auto"></video>
+      <button class="video__mutebtn" id="videoMuteBtn" aria-label="Turn sound on">
+        <svg id="muteIconOff" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><line x1="16" y1="9" x2="21" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="21" y1="9" x2="16" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg id="muteIconOn" width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:none"><path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor"/><path d="M15.5 9a3.5 3.5 0 0 1 0 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M17.5 6.5a7 7 0 0 1 0 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <p class="video__caption reveal">Intentional Evolution — Managing Organisational Complexity</p>
+    <button class="btn btn--primary video__continue reveal" id="toWizardBtn">
+      <span>Continue to reflection</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 4v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </section>
+
+  <!-- ============================================================
+       GUIDED REFLECTION WIZARD
+       ============================================================ -->
+  <section class="section section--wizard" id="wizard">
+
+    <div class="wizard__progress" aria-hidden="true" id="wizardProgress">
+      <span class="wizard__dot" data-dot="1"></span>
+      <span class="wizard__dot" data-dot="2"></span>
+      <span class="wizard__dot" data-dot="3"></span>
+      <span class="wizard__dot" data-dot="4"></span>
+      <span class="wizard__dot" data-dot="5"></span>
+      <span class="wizard__dot" data-dot="6"></span>
+    </div>
+
+    <div class="wizard__stage" id="wizardStage">
+
+      <article class="wstep is-active" data-step="1" data-pillar-match="1">
+        <p class="wstep__eyebrow">Reality 01 &middot; Growth &amp; Complexity</p>
+        <p class="wstep__message">
+          Every successful organisation grows — more customers, products, technology,
+          regulation, data. As it grows, it also becomes more interconnected.
+          <em>Complexity isn't a failure. It's a natural consequence of success.</em>
+        </p>
+        <h3 class="wstep__question">Which aspect of organisational growth has become the most difficult to navigate?</h3>
+        <div class="wstep__options" data-group="1">
+          <button class="wopt">Business complexity</button>
+          <button class="wopt">Technology landscape</button>
+          <button class="wopt">Data &amp; information</button>
+          <button class="wopt">Regulatory expectations</button>
+          <button class="wopt">Cross-team dependencies</button>
+        </div>
+        <p class="wstep__transition">Growth isn't the challenge. Understanding and managing complexity is.</p>
+        <button class="btn btn--primary wstep__continue">Continue</button>
+      </article>
+
+      <article class="wstep" data-step="2" data-pillar-match="4">
+        <p class="wstep__eyebrow">Reality 02 &middot; Understanding the Organisation</p>
+        <p class="wstep__message">
+          Knowledge gradually spreads across people, systems and teams. Ownership evolves.
+          <em>The organisation becomes harder to understand than to work within.</em>
+        </p>
+        <h3 class="wstep__question">How quickly could a new leader become truly effective in your area?</h3>
+        <div class="wstep__options" data-group="2">
+          <button class="wopt">Less than 30 days</button>
+          <button class="wopt">30&ndash;60 days</button>
+          <button class="wopt">60&ndash;90 days</button>
+          <button class="wopt">More than 90 days</button>
+          <button class="wopt">It depends who they know</button>
+        </div>
+        <p class="wstep__followup">Where does critical knowledge live today — documents, or only people?</p>
+        <p class="wstep__transition">The harder it is to understand, the more it depends on a few people to explain it.</p>
+        <button class="btn btn--primary wstep__continue">Continue</button>
+      </article>
+
+      <article class="wstep" data-step="3" data-pillar-match="2">
+        <p class="wstep__eyebrow">Reality 03 &middot; Continuous Evolution</p>
+        <p class="wstep__message">
+          The world keeps evolving — technology, AI, customer expectations, regulation.
+          <em>Standing still quietly becomes moving backwards.</em>
+        </p>
+        <h3 class="wstep__question">How intentionally are we investing in our own growth?</h3>
+        <div class="wstep__options" data-group="3">
+          <button class="wopt">Very intentionally</button>
+          <button class="wopt">Occasionally</button>
+          <button class="wopt">Mostly when required</button>
+          <button class="wopt">Rarely</button>
+          <button class="wopt">Unsure</button>
+        </div>
+        <p class="wstep__transition">Tomorrow belongs to organisations that continue learning.</p>
+        <button class="btn btn--primary wstep__continue">Continue</button>
+      </article>
+
+      <article class="wstep" data-step="4" data-pillar-match="3">
+        <p class="wstep__eyebrow">Reality 04 &middot; Building Tomorrow</p>
+        <p class="wstep__message">
+          Delivery keeps organisations moving — but delivery alone doesn't create the future.
+          <em>The future is shaped by people who simplify, challenge and make time to build it.</em>
+        </p>
+        <h3 class="wstep__question">Where does most of your leadership time go today?</h3>
+        <div class="wstep__options" data-group="4">
+          <button class="wopt">Operational delivery</button>
+          <button class="wopt">Governance</button>
+          <button class="wopt">People leadership</button>
+          <button class="wopt">Strategic thinking</button>
+          <button class="wopt">Future planning</button>
+        </div>
+        <p class="wstep__transition">Are we creating tomorrow — or simply responding to today?</p>
+        <button class="btn btn--primary wstep__continue">Continue</button>
+      </article>
+
+      <article class="wstep" data-step="5" data-pillar-match="5">
+        <p class="wstep__eyebrow">Reality 05 &middot; Organisation &amp; Culture</p>
+        <p class="wstep__message">
+          Growth changes organisations — and it changes people. Roles broaden.
+          <em>Success starts to depend on ownership, communication, trust and culture.</em>
+        </p>
+        <h3 class="wstep__question">Which characteristic most strengthens a high-performing organisation?</h3>
+        <div class="wstep__options" data-group="5">
+          <button class="wopt">Clear ownership</button>
+          <button class="wopt">Knowledge sharing</button>
+          <button class="wopt">Strong leadership</button>
+          <button class="wopt">Constructive challenge</button>
+          <button class="wopt">Culture of excellence</button>
+        </div>
+        <p class="wstep__transition">Organisations become stronger when their people grow alongside them.</p>
+        <button class="btn btn--primary wstep__continue">Continue</button>
+      </article>
+
+      <article class="wstep wstep--final" data-step="6">
+        <p class="wstep__eyebrow">Before we go further</p>
+        <h3 class="wstep__final-lead">What stood out?</h3>
+        <p class="wstep__final-body">
+          The five realities you've just reflected on are not isolated challenges.
+          They're connected — together, they shape how resilient, adaptable and
+          successful an organisation becomes.
+        </p>
+        <p class="wstep__big-question">
+          If these realities exist in every growing organisation&hellip;<br>
+          <strong>how do we intentionally become stronger?</strong>
+        </p>
+        <a class="btn btn--primary wstep__continue" href="navigation.html">Continue to Navigation</a>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
